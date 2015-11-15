@@ -3,6 +3,9 @@
 
 A utility library for high-quality JavaScript/TypeScript.
 
+## How to install
+`npm install powerful`
+
 ## How to build
 1. `git clone git://github.com/AyaMorisawa/node-powerful.git`
 2. `cd node-powerful`
