@@ -17,7 +17,6 @@ task('build:ts', () => {
 		.pipe(ts(tsProject));
 	return merge([
 		tsResult.js.pipe(babel({
-			// modules: 'commonStrict'
 			presets: ['es2015']
 		}))
 		.pipe(dest('./built')),
