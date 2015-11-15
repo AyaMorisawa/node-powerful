@@ -5,4 +5,4 @@ import Either from './either';
 import Option from './option';
 import id from './id';
 
-export { Task, Either, Option }
+export { Task, Either, Option, id }
