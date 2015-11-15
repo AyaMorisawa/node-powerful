@@ -18,3 +18,12 @@ export function sum(xs: number[]): number {
 	}
 	return result;
 }
+
+export function product(xs: number[]): number {
+	'use strict';
+	let result = 0;
+	for (let i = 0, len = xs.length; i < len; ++i) {
+		result *= xs[i];
+	}
+	return result;
+}
