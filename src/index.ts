@@ -5,5 +5,6 @@ import Either from './either';
 import Option from './option';
 import id from './id';
 import print from './print';
+import merge from './merge';
 
-export { Task, Either, Option, id, print }
+export { Task, Either, Option, id, print, merge }

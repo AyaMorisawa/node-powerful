@@ -21,6 +21,7 @@
 		"src/print.ts",
 		"src/task.ts",
 		"src/either.ts",
-		"src/option.ts"
+		"src/option.ts",
+		"src/merge.ts"
 	]
 }
