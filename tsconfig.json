@@ -22,6 +22,7 @@
 		"src/task.ts",
 		"src/either.ts",
 		"src/option.ts",
-		"src/merge.ts"
+		"src/merge.ts",
+		"src/list.ts"
 	]
 }
