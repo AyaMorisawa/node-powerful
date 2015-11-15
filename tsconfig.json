@@ -1,0 +1,25 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"noEmitOnError": true,
+		"noImplicitAny": true,
+		"declaration": true,
+		"moduleResolution": "node",
+		"newLine": "LF",
+		"sourceMap": false,
+		"target": "ES6",
+		"removeComments": true,
+		"noLib": true,
+		"outDir": "built",
+		"rootDir": "src"
+	},
+	"files": [
+		"node_modules/typescript/lib/lib.es6.d.ts",
+		"typings/bundle.d.ts",
+		"src/index.ts",
+		"src/id.ts",
+		"src/task.ts",
+		"src/either.ts",
+		"src/option.ts"
+	]
+}
