@@ -22,7 +22,7 @@
 		"src/task.ts",
 		"src/either.ts",
 		"src/option.ts",
-		"src/merge.ts",
+		"src/object.ts",
 		"src/list.ts",
 		"src/math.ts",
 		"src/string.ts"
