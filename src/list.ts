@@ -2,14 +2,16 @@ import Task from './task';
 
 export function shuffle<T>(xs: T[]): Task<T[]> {
 	'use strict';
-	let n = xs.length;
-	while (n) {
-		const i = Math.floor(Math.random() * n--);
-		const t = xs[n];
-		xs[n] = xs[i];
-		xs[i] = t;
-	}
-	return Task.resolve(xs);
+	return Task.sync(() => {
+		let n = xs.length;
+		while (n) {
+			const i = Math.floor(Math.random() * n--);
+			const t = xs[n];
+			xs[n] = xs[i];
+			xs[i] = t;
+		}
+		return xs;
+	});
 }
 
 export function sum(xs: number[]): number {

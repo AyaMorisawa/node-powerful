@@ -13,7 +13,7 @@ export function distance(point1: Point, point2: Point): number {
 
 export function randomInteger(min: number, max: number): Task<number> {
 	'use strict';
-	return Task.resolve(min + Math.floor(Math.random() * (max - min + 1)));
+	return Task.sync(() => min + Math.floor(Math.random() * (max - min + 1)));
 }
 
 export function factorial(n: number): number {
