@@ -23,6 +23,7 @@
 		"src/either.ts",
 		"src/option.ts",
 		"src/merge.ts",
-		"src/list.ts"
+		"src/list.ts",
+		"src/math.ts"
 	]
 }
