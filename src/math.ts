@@ -1,5 +1,5 @@
 import Task from './task';
-import { range, product } from './list';
+import { product } from './list';
 
 export interface Point {
 	x: number;
@@ -19,4 +19,13 @@ export function randomInteger(min: number, max: number): Task<number> {
 export function factorial(n: number): number {
 	'use strict';
 	return n === 0 ? 1 : product(range(1, n));
+}
+
+export function range(from: number, to: number): number[] {
+	'use strict';
+	let result: number[] = [];
+	for (let i = from; i <= to; ++i) {
+		result.push(i);
+	}
+	return result;
 }

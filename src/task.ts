@@ -1,4 +1,4 @@
-import { range } from './list';
+import { range } from './math';
 
 export interface Executor<T> {
 	(done: (value: T) => void): void;
