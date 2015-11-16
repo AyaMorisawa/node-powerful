@@ -1,4 +1,6 @@
-export function shuffle<T>(xs: T[]): T[] {
+import Task from './task';
+
+export function shuffle<T>(xs: T[]): Task<T[]> {
 	'use strict';
 	let n = xs.length;
 	while (n) {
@@ -7,7 +9,7 @@ export function shuffle<T>(xs: T[]): T[] {
 		xs[n] = xs[i];
 		xs[i] = t;
 	}
-	return xs;
+	return Task.resolve(xs);
 }
 
 export function sum(xs: number[]): number {
