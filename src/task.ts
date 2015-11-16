@@ -1,3 +1,4 @@
+import Either from './either';
 import { range } from './math';
 
 export interface Executor<T> {
@@ -22,6 +23,13 @@ export default class Task<T> {
 
 	static sync<T>(f: () => T): Task<T> {
 		return new Task<T>(done => done(f()));
+	}
+
+	static fromPromise<T, S>(f: () => Promise<T>): Task<Either<S, T>> {
+		return new Task<Either<S, T>>(done => f().then(
+			value => done(Either.right<S, T>(value)),
+			reason => done(Either.left<S, T>(reason)))
+		);
 	}
 
 	static delay(ms: number): Task<void> {
