@@ -31,3 +31,8 @@ export function product(xs: number[]): number {
 	}
 	return result;
 }
+
+export function empty<T>(xs: T[]): boolean {
+	'use strict';
+	return xs.length === 0;
+}
