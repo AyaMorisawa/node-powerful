@@ -24,6 +24,7 @@
 		"src/option.ts",
 		"src/merge.ts",
 		"src/list.ts",
-		"src/math.ts"
+		"src/math.ts",
+		"src/string.ts"
 	]
 }
