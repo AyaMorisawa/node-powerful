@@ -16,3 +16,8 @@ export function fromJson<T>(text: string): Either<SyntaxError, T> {
 		return Either.left<SyntaxError, T>(e);
 	}
 }
+
+export function toJson<T>(object: T): string {
+	'use strict';
+	return JSON.stringify(object);
+}
