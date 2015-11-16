@@ -1,3 +1,5 @@
+import { range } from './list';
+
 export interface Executor<T> {
 	(done: (value: T) => void): void;
 }
@@ -24,6 +26,10 @@ export default class Task<T> {
 
 	static delay(ms: number): Task<void> {
 		return new Task<void>(done => setTimeout(done, ms));
+	}
+
+	static repeat(times: number, f: (index: number) => Task<void>): Task<void> {
+		return Task.sync(() => range(1, times).map(f).forEach(task => task.run()));
 	}
 
 	next<S>(f: (value: T) => Task<S>): Task<S> {
