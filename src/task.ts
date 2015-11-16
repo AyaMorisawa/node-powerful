@@ -48,7 +48,7 @@ export default class Task<T> {
 		return new Task<S>(done => this.executor(value => done(f(value))));
 	}
 
-	run(): void {
-		return void new Promise<T>(this.executor);
+	run(): Promise<T> {
+		return new Promise<T>(this.executor);
 	}
 }
