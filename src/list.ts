@@ -23,7 +23,7 @@ export function sum(xs: number[]): number {
 
 export function product(xs: number[]): number {
 	'use strict';
-	let result = 0;
+	let result = 1;
 	for (let i = 0, len = xs.length; i < len; ++i) {
 		result *= xs[i];
 	}
