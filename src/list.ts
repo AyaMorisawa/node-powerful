@@ -27,3 +27,12 @@ export function product(xs: number[]): number {
 	}
 	return result;
 }
+
+export function range(from: number, to: number): number[] {
+	'use strict';
+	let result: number[] = [];
+	for (let i = from; i <= to; ++i) {
+		result.push(i);
+	}
+	return result;
+}
