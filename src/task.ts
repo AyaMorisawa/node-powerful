@@ -29,7 +29,7 @@ export default class Task<T> {
 	}
 
 	static repeat(times: number, f: (index: number) => Task<void>): Task<void> {
-		return Task.sync(() => range(1, times).map(f).forEach(task => task.run()));
+		return range(1, times).map(f).reduce((prev, current) => prev.next(() => current));
 	}
 
 	next<S>(f: (value: T) => Task<S>): Task<S> {
