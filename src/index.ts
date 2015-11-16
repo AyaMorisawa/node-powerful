@@ -9,5 +9,6 @@ import * as Math from './math';
 import * as String from './string';
 import id from './id';
 import print from './print';
+import * as dataSize from './dataSize';
 
-export { Task, Either, Option, _Object as Object, List, Math, String, id, print }
+export { Task, Either, Option, _Object as Object, List, Math, String, id, print, dataSize }
