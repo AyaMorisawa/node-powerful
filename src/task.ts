@@ -18,8 +18,8 @@ export default class Task<T> {
 		return new Task<T>(done => Promise.race(tasks.map(task => new Promise<T>(task.executor))).then(done));
 	}
 
-	static sync<T, S>(f: (value: T) => S): (value: T) => Task<S> {
-		return value => new Task<S>(done => done(f(value)));
+	static sync<T>(f: () => T): Task<T> {
+		return new Task<T>(done => done(f()));
 	}
 
 	static delay(ms: number): Task<void> {
