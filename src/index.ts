@@ -8,8 +8,9 @@ import * as _Object from './object';
 import * as List from './list';
 import * as Math from './math';
 import * as String from './string';
+import * as Boolean from './boolean';
 import id from './id';
 import print from './print';
 import * as dataSize from './dataSize';
 
-export { Task, Either, Option, Writer, _Object as Object, List, Math, String, id, print, dataSize }
+export { Task, Either, Option, Writer, _Object as Object, List, Math, String, Boolean, id, print, dataSize }
