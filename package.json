@@ -1,6 +1,6 @@
 {
   "name": "powerful",
-  "version": "4.6.0",
+  "version": "5.0.0",
   "description": "A utility library for high-quality JavaScript/TypeScript.",
   "main": "./built/index.js",
   "typings": "./built/index.d.ts",
