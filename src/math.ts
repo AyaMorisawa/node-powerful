@@ -1,5 +1,4 @@
 import Task from './task';
-import { product } from './list';
 
 export interface Point {
 	x: number;
@@ -14,6 +13,24 @@ export function distance(point1: Point, point2: Point): number {
 export function randomInteger(min: number, max: number): Task<number> {
 	'use strict';
 	return Task.sync(() => min + Math.floor(Math.random() * (max - min + 1)));
+}
+
+export function sum(xs: number[]): number {
+	'use strict';
+	let result = 0;
+	for (let i = 0, len = xs.length; i < len; ++i) {
+		result += xs[i];
+	}
+	return result;
+}
+
+export function product(xs: number[]): number {
+	'use strict';
+	let result = 1;
+	for (let i = 0, len = xs.length; i < len; ++i) {
+		result *= xs[i];
+	}
+	return result;
 }
 
 export function factorial(n: number): number {

@@ -14,24 +14,6 @@ export function shuffle<T>(xs: T[]): Task<T[]> {
 	});
 }
 
-export function sum(xs: number[]): number {
-	'use strict';
-	let result = 0;
-	for (let i = 0, len = xs.length; i < len; ++i) {
-		result += xs[i];
-	}
-	return result;
-}
-
-export function product(xs: number[]): number {
-	'use strict';
-	let result = 1;
-	for (let i = 0, len = xs.length; i < len; ++i) {
-		result *= xs[i];
-	}
-	return result;
-}
-
 export function empty<T>(xs: T[]): boolean {
 	'use strict';
 	return xs.length === 0;
