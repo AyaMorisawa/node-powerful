@@ -37,10 +37,10 @@ export default class Task<T> {
 	}
 
 	static repeat(times: number, f: (index: number) => Task<void>): Task<void> {
-		return range(1, times).map(f).reduce((prev, current) => prev.next(() => current));
+		return range(1, times).map(f).reduce((prev, current) => prev.pipe(() => current));
 	}
 
-	next<S>(f: (value: T) => Task<S>): Task<S> {
+	pipe<S>(f: (value: T) => Task<S>): Task<S> {
 		return new Task<S>(done => this.executor(value => f(value).executor(done)));
 	}
 
