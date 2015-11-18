@@ -15,8 +15,8 @@ export default class Either<T, S> {
 		return new Either<T, S>(EitherType.Right, null, value);
 	}
 
-	either<U>(f: (value: T) => U, g: (value: S) => U): U {
-		return this.type === EitherType.Left ? f(this.leftValue) : g(this.rightValue);
+	getValue<U>(whenLeft: (value: T) => U, whenRight: (value: S) => U): U {
+		return this.type === EitherType.Left ? whenLeft(this.leftValue) : whenRight(this.rightValue);
 	}
 
 	case<U, V>(f: (value: T) => Either<U, V>, g: (value: S) => Either<U, V>): Either<U, V> {
