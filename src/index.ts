@@ -7,7 +7,7 @@ import Writer from './writer';
 import * as Obj from './obj';
 import * as List from './list';
 import * as Math from './math';
-import * as String from './string';
+import * as Str from './str';
 import * as Bool from './bool';
 import id from './id';
 import print from './print';
