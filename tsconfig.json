@@ -23,7 +23,7 @@
 		"src/either.ts",
 		"src/option.ts",
 		"src/writer.ts",
-		"src/object.ts",
+		"src/obj.ts",
 		"src/list.ts",
 		"src/math.ts",
 		"src/string.ts",
