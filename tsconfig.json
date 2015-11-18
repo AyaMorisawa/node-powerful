@@ -17,7 +17,6 @@
 		"node_modules/typescript/lib/lib.es6.d.ts",
 		"typings/bundle.d.ts",
 		"src/index.ts",
-		"src/id.ts",
 		"src/print.ts",
 		"src/task.ts",
 		"src/either.ts",
@@ -28,6 +27,7 @@
 		"src/math.ts",
 		"src/str.ts",
 		"src/bool.ts",
+		"src/func.ts",
 		"src/dataSize.ts"
 	]
 }

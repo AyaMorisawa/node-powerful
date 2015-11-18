@@ -9,8 +9,8 @@ import * as List from './list';
 import * as Math from './math';
 import * as Str from './str';
 import * as Bool from './bool';
-import id from './id';
+import * as Func from './func';
 import print from './print';
 import * as dataSize from './dataSize';
 
-export { Task, Either, Option, Writer, Obj, List, Math, Str, Bool, id, print, dataSize }
+export { Task, Either, Option, Writer, Obj, List, Math, Str, Bool, Func, print, dataSize }
