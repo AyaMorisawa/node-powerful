@@ -27,7 +27,7 @@
 		"src/list.ts",
 		"src/math.ts",
 		"src/string.ts",
-		"src/boolean.ts",
+		"src/bool.ts",
 		"src/dataSize.ts"
 	]
 }
