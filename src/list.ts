@@ -18,3 +18,12 @@ export function empty<T>(xs: T[]): boolean {
 	'use strict';
 	return xs.length === 0;
 }
+
+export function replicate<T>(n: number, x: T): T[] {
+	'use strict';
+	const result: T[] = [];
+	for (let i = 0; i < n; ++i) {
+		result.push(x);
+	}
+	return result;
+}
