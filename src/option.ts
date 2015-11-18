@@ -10,8 +10,8 @@ export default class Option<T> {
 		return new Option(false, null);
 	}
 
-	option<U>(value: U, f: (value: T) => U): U {
-		return this.hasValue ? f(this.value) : value;
+	getValue(defaultValue: T): T {
+		return this.hasValue ? this.value : defaultValue;
 	}
 
 	case<S>(f: (value: T) => Option<S>, g: () => Option<S>): Option<S> {
