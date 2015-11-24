@@ -16,9 +16,7 @@ task('build:ts', () => {
 	const tsResult = tsProject.src()
 		.pipe(ts(tsProject));
 	return merge([
-		tsResult.js.pipe(babel({
-			presets: ['es2015']
-		}))
+		tsResult.js.pipe(babel())
 		.pipe(dest('./built')),
 		tsResult.dts.pipe(dest('./built'))
 	]);
