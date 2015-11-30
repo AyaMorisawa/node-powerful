@@ -17,7 +17,7 @@ export default class Match<T, S> {
 		return this;
 	}
 
-	toOption(): Option<S> {
-		return this.result;
+	getValue(defaultValue: S): S {
+		return this.result.getValue(defaultValue);
 	}
 }
