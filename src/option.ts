@@ -21,4 +21,8 @@ export default class Option<T> {
 	map<S>(f: (value: T) => S): Option<S> {
 		return this.hasValue ? Option.some(f(this.value)) : Option.none<S>();
 	}
+
+	noneToOption(f: () => Option<T>): Option<T> {
+		return this.hasValue ? this : f();
+	}
 }
