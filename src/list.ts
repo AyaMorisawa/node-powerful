@@ -14,7 +14,7 @@ export function shuffle<T>(xs: T[]): Task<T[]> {
 	});
 }
 
-export function empty<T>(xs: T[]): boolean {
+export function isEmpty(xs: { length: number }): boolean {
 	'use strict';
 	return xs.length === 0;
 }
